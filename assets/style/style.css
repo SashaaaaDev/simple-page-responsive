@@ -307,7 +307,11 @@ a {
   .header-content__title {
     font-size: 35px;
   }
-
+  
+  .main-section__text {
+    padding: 0 0 0 12px;
+  }
+  
   .header-content {
     gap: 50px;
     max-width: 340px;
