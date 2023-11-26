@@ -43,6 +43,7 @@ a {
 .footer-content {
   width: min(100% - 40px, 1110px);
   margin-inline: auto;
+
 }
 
 .header-nav {
@@ -71,20 +72,25 @@ a {
 .header-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 65px;
-  max-width: 540px;
+  align-content: center;
+  align-items: flex-start;
 }
 
 .header-content__title {
   font-weight: 600;
   font-size: 48px;
+  /* display: flex; */
   line-height: var(--ln);
+  /* justify-content: center; */
 }
 
 .header-content__description {
   color: var(--bkg-g);
   line-height: var(--ln);
+  /* display: flex;
+  justify-content: center; */
+  max-width: 540px;
 }
 
 .header-content__button {
@@ -96,6 +102,7 @@ a {
   padding: 0.5em;
   display: flex;
   justify-content: center;
+
   align-items: center;
   color: #fff;
 }
@@ -215,9 +222,6 @@ a {
     padding: 0 200px 0 0;
   }
 
-  .header-content {
-    max-width: 440px;
-  }
 
   .main-content__video {
     height: 500px;
@@ -244,7 +248,13 @@ a {
   }
 
   .header-content {
-    max-width: 440px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content__description {
+    max-width: 480px;
+    text-align: center;
   }
 
   .main-section__item {
@@ -273,10 +283,12 @@ a {
 
   .header-content__title {
     font-size: 39px;
+
   }
 
   .header-content {
-    max-width: 340px;
+    align-items: center;
+    justify-content: center;
   }
 
   .main-content__video {
@@ -294,6 +306,12 @@ a {
     width: 40px;
   }
 
+  .header-content__button {
+    min-width: 170px;
+    min-height: 55px;
+    padding: 0.2em;
+  }
+
   .main-section__number {
     font-size: 19px;
     margin-top: 5px;
@@ -307,14 +325,15 @@ a {
   .header-content__title {
     font-size: 35px;
   }
-  
-  .main-section__text {
-    padding: 0 0 0 12px;
+
+  .header-content__description {
+    max-width: 340px;
   }
-  
+
   .header-content {
     gap: 50px;
-    max-width: 340px;
+    display: flex;
+    align-items: center;
   }
 
   .main-section {
@@ -330,8 +349,20 @@ a {
     padding-bottom: 101px;
   }
 
+  .main-article,
+  .main-content__article {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .header-nav {
     margin-bottom: 102px;
+  }
+
+  .main-section__text {
+    padding: 0 0 0 12px;
   }
 
   .main-article__title,
@@ -352,13 +383,36 @@ a {
 
 @media (max-width:375px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .header-nav__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .main-article__title,
+  .header-content__title {
+    text-align: center;
+  }
+
+  .header-content__button {
+    min-width: 170px;
+    min-height: 55px;
+    padding: 0.2em;
+  }
+
+  .header-content__description {
+    max-width: 340px;
+    text-align: center;
+  }
+
+  .header-content {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-content__video {
@@ -373,25 +427,33 @@ a {
     padding: 0 0 0 12px;
   }
 
+  .main-article,
+  .main-content__article {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .main-section__image {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
 
   .main-section__item {
-    padding: 0 120px 0 0;
+    padding: 0 125px 0 0;
   }
 
   .main-section__number {
-    font-size: 15px;
-    margin-top: 5px;
-    margin-bottom: 3px;
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: 2px;
   }
 }
 
 @media (max-width:300px) {
   html {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .main-section {
@@ -399,14 +461,26 @@ a {
   }
 
   .main-section__number {
-    font-size: 14px;
+    font-size: 17px;
     margin-top: 1px;
     margin-bottom: 3px;
   }
 
+  .main-section__text {
+    padding: 0 0 0 10px;
+  }
+
   .main-section__image {
-    height: 26px;
-    width: 26px;
+    height: 35px;
+    width: 35px;
+  }
+
+  .main-article,
+  .main-content__article {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .header-content__button {
@@ -416,6 +490,10 @@ a {
   }
 
   .main-section__item {
-    padding: 0 105px 0 0;
+    padding: 0 115px 0 0;
+  }
+
+  .main-content__video {
+    height: 190px;
   }
 }
